@@ -1,0 +1,13 @@
+<h1>Categories</h1>
+
+<div class="lead">
+<%= @category.name %> 
+<%= button_to "delete category",{action: :destroy, id: @category.id}, method: :delete, class: "btn btn-default"  %> 
+
+products
+<% @products.map do |prod| %>
+<li><%= prod.name %></li>
+<% end %>
+</div>
+
+<%#= link_to "edit", edit_category_path, class: "btn btn-default"  %>

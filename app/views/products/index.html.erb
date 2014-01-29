@@ -1,0 +1,7 @@
+<h1>Products</h1>
+
+<% @products.each do |prod| %>
+<li class="h3"> <%= link_to prod.name, product_path(prod) %>
+<% end %>
+<br>
+<%=link_to "add product", new_product_path, class: "btn btn-default"   %>
